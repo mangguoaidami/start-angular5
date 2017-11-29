@@ -13,17 +13,22 @@
 </div> -->
 <div class="list">
   <ul>
-    <li *ngFor="let hero of heroes" (click)="onSelect(hero)">{{ hero.name }}</li>
+    <li *ngFor="let hero of heroes"
+    (click)="onSelect(hero)"
+    [class.active]="hero ===selectHero"
+    >{{ hero.name }}</li>
   </ul>
 </div>
 
-<h2>{{ selectHero.name | uppercase }} Details</h2>
-<div class="">
-  <span>id: </span>{{ selectHero.id }}
-</div>
-<div class="">
-  <label for="">
-    name:
-    <input type="text" [(ngModel)]="selectHero.name" name="" value="" placeholder="name">
-  </label>
+<div class="" *ngIf="selectHero">
+  <h2>{{ selectHero.name | uppercase }} Details</h2>
+  <div class="">
+    <span>id: </span>{{ selectHero.id }}
+  </div>
+  <div class="">
+    <label for="">
+      name:
+      <input type="text" [(ngModel)]="selectHero.name" name="" value="" placeholder="name">
+    </label>
+  </div>
 </div>

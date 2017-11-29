@@ -1,3 +1,6 @@
 .list ul li{
   cursor: pointer; list-style: none;
 }
+.list ul li.active{
+  background-color: #cccccc;
+}
