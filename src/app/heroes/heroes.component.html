@@ -1,16 +1,3 @@
-<!-- <p>
-  name is :{{hero.name | uppercase}}
-</p>
-<p>
-  id is: {{hero.id}}
-</p> -->
-
-<!-- <div class="">
-  <label for="">
-    name:
-    <input type="text" [(ngModel)]="hero.name" name="" value="" placeholder="name">
-  </label>
-</div> -->
 <div class="list">
   <ul>
     <li *ngFor="let hero of heroes"
@@ -19,16 +6,4 @@
     >{{ hero.name }}</li>
   </ul>
 </div>
-
-<div class="" *ngIf="selectHero">
-  <h2>{{ selectHero.name | uppercase }} Details</h2>
-  <div class="">
-    <span>id: </span>{{ selectHero.id }}
-  </div>
-  <div class="">
-    <label for="">
-      name:
-      <input type="text" [(ngModel)]="selectHero.name" name="" value="" placeholder="name">
-    </label>
-  </div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
