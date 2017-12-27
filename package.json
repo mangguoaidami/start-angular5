@@ -10,7 +10,9 @@
     "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "tract": "ng xi18n --outputPath=src/locale",
+    "start:zh": "ng serve --aot --i18nFile=src/locale/messages.zh.xlf --i18nFormat=xlf --locale=zh"
   },
   "private": true,
   "dependencies": {
