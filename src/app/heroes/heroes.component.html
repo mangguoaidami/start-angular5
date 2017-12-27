@@ -1,7 +1,7 @@
 <div class="list">
   <ul>
     <li *ngFor="let hero of heroes"
-    (click)="onSelect(hero)"
+    [routerLink]="[ '/detail', hero.id ]"
     [class.active]="hero ===selectHero"
     >{{ hero.name }}</li>
   </ul>
