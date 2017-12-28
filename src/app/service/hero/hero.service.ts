@@ -12,7 +12,7 @@ export class HeroService {
   constructor(private messageService: MessageService) { }
 
   getAllHeroes(): Promise<Hero[]> {
-    this.messageService.add('HeroService: fetched heroes');
+    this.messageService.add('HeroService: init hero!');
     return Promise.resolve(HEROES);
   }
 
