@@ -19,12 +19,12 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  getHeroes(){
+  getHeroes() {
     this.heroService.getAllHeroes()
       .then(data => this.heroes = data);
   }
 
-  onSelect(hero): void{
+  onSelect(hero): void {
     this.selectedHero = hero;
   }
 }

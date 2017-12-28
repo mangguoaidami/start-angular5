@@ -16,8 +16,11 @@ export class HeroService {
     return Promise.resolve(HEROES);
   }
 
-  getHero(id: number): Promise<Hero>{
+  getHero(id: number): Promise<Hero> {
     return this.getAllHeroes()
       .then(heroes => heroes.find(hero => hero.id === id));
+    // let data = this.getAllHeroes()
+    //   .then(heroes => heroes.find( hero => hero.id === id));
+    // return Promise.resolve(data);
   }
 }
